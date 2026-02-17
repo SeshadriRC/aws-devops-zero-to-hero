@@ -10,7 +10,9 @@ sudo ./aws/install
 ```
 
 
-# Method-1: AWS Login
+# Method-1: AWS Login      
+
+```However Method-2 is recommended```
 
 - Open aws cli terminal and type below command
 
@@ -46,6 +48,23 @@ secret_key : ****************JywS     : login            :
 region     : ap-south-1               : config-file      : ~/.aws/config
 
 ```
+
+---
+
+# Method-2: Access Key --> Recommended
+
+```
+IAM → Users → sesha-write → Security credentials → Create access key
+```
+
+<img width="1919" height="583" alt="image" src="https://github.com/user-attachments/assets/2f9cb57f-8f92-4720-9f5c-cd117da5c18d" />
+<img width="1916" height="521" alt="image" src="https://github.com/user-attachments/assets/3bd15e4c-1c36-4cef-b62f-b5b6220fb2ab" />
+<img width="1919" height="528" alt="image" src="https://github.com/user-attachments/assets/a8e76310-005f-4845-a902-51bf2ef1da5c" />
+<img width="1930" height="935" alt="image" src="https://github.com/user-attachments/assets/63e7ed69-020b-40df-9b06-1354d092e369" />
+
+
+
+
 
 ---
 
