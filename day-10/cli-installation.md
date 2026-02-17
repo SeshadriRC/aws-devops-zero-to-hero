@@ -62,7 +62,14 @@ IAM → Users → sesha-write → Security credentials → Create access key
 <img width="1919" height="528" alt="image" src="https://github.com/user-attachments/assets/a8e76310-005f-4845-a902-51bf2ef1da5c" />
 <img width="1930" height="935" alt="image" src="https://github.com/user-attachments/assets/63e7ed69-020b-40df-9b06-1354d092e369" />
 
+```bash
+aws configure
 
+AWS Access Key ID     : <paste>
+AWS Secret Access Key : <paste>
+Default region name   : ap-south-1
+Default output format : json
+```
 
 
 
