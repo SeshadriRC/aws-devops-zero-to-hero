@@ -10,7 +10,7 @@ sudo ./aws/install
 ```
 
 
-# Method1: AWS Login
+# Method-1: AWS Login
 
 - Open aws cli terminal and type below command
 
@@ -36,3 +36,4 @@ root@LAPTOP-QMBUJPPJ:~/.aws# aws sts get-caller-identity    # used to validate t
 
 <img width="1919" height="382" alt="image" src="https://github.com/user-attachments/assets/453c775b-b08a-45ff-8ad1-5f8ca2851baf" />
 
+---
