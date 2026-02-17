@@ -27,6 +27,16 @@ root@LAPTOP-QMBUJPPJ:~/.aws# aws sts get-caller-identity    # used to validate t
     "Account": "466567470934",
     "Arn": "arn:aws:iam::466567470934:user/sesha-write"
 
+root@LAPTOP-QMBUJPPJ:~/.aws# aws configure get region
+ap-south-1
+
+root@LAPTOP-QMBUJPPJ:~/.aws# aws configure list
+NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************LHAN     : login            :
+secret_key : ****************JywS     : login            :
+region     : ap-south-1               : config-file      : ~/.aws/config
+
 ```
 
 <img width="1919" height="351" alt="image" src="https://github.com/user-attachments/assets/f581abfc-fda2-4ac4-899b-209cf7b0eb63" />
