@@ -15,8 +15,8 @@ sudo ./aws/install
 - Open aws cli terminal and type below command
 
 ```bash
-# aws login
-# region: ap-south-1   
+aws login                                                  # login
+region: ap-south-1                                         # Set the region
 
 # Then it will ask for authentication in browser, so we need to authenticate
 
