@@ -37,3 +37,6 @@ root@LAPTOP-QMBUJPPJ:~/.aws# aws sts get-caller-identity    # used to validate t
 <img width="1919" height="382" alt="image" src="https://github.com/user-attachments/assets/453c775b-b08a-45ff-8ad1-5f8ca2851baf" />
 
 ---
+
+## CLI commands
+
