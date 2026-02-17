@@ -14,8 +14,6 @@ sudo ./aws/install
 
 - Open aws cli terminal
 
-<img width="1919" height="617" alt="image" src="https://github.com/user-attachments/assets/674e5bdc-2f00-4bb4-936d-7aef9f5f12db" />
-
 <img width="1919" height="351" alt="image" src="https://github.com/user-attachments/assets/f581abfc-fda2-4ac4-899b-209cf7b0eb63" />
 
 
