@@ -12,7 +12,22 @@ sudo ./aws/install
 
 # Method1: AWS Login
 
-- Open aws cli terminal
+- Open aws cli terminal and type below command
+
+```bash
+# aws login
+# region: ap-south-1   
+
+# Then it will ask for authentication in browser, so we need to authenticate
+
+
+root@LAPTOP-QMBUJPPJ:~/.aws# aws sts get-caller-identity    # used to validate the current user
+{
+    "UserId": "AIDAWZIMWT5LJUEZ7I7ME",
+    "Account": "466567470934",
+    "Arn": "arn:aws:iam::466567470934:user/sesha-write"
+
+```
 
 <img width="1919" height="351" alt="image" src="https://github.com/user-attachments/assets/f581abfc-fda2-4ac4-899b-209cf7b0eb63" />
 
