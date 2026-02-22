@@ -6,7 +6,6 @@ read -p "Enter AWS Region (example: ap-south-1): " REGION
 read -p "Enter AMI ID: " AMI
 read -p "Enter Instance Type (example: t2.micro): " TYPE
 read -p "Enter Key Pair Name: " KEY_NAME
-read -p "Enter Root Volume Size (GB): " VOL_SIZE
 read -p "Enter Instance Name Tag: " NAME_TAG
 
 echo
@@ -15,7 +14,7 @@ echo "Region     : $REGION"
 echo "AMI        : $AMI"
 echo "Type       : $TYPE"
 echo "Key Pair   : $KEY_NAME"
-echo "Volume     : ${VOL_SIZE} GB"
+echo "Root Volume: DEFAULT (from AMI)"
 echo "Name Tag   : $NAME_TAG"
 echo
 
@@ -34,7 +33,6 @@ INSTANCE_ID=$(aws ec2 run-instances \
   --instance-type "$TYPE" \
   --key-name "$KEY_NAME" \
   --count 1 \
-  --block-device-mappings "[{\"DeviceName\":\"/dev/xvda\",\"Ebs\":{\"VolumeSize\":$VOL_SIZE,\"VolumeType\":\"gp3\",\"DeleteOnTermination\":true}}]" \
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$NAME_TAG}]" \
   --query 'Instances[0].InstanceId' \
   --output text)
