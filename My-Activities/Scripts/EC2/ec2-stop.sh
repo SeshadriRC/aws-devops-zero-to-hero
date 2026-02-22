@@ -7,7 +7,7 @@ echo " AWS EC2 STOP INSTANCES - INTERACTIVE "
 echo "======================================="
 echo
 echo "Choose option:"
-echo "1) Stop ALL running EC2 instances"
+echo "1) Stop ALL running EC2 instances (NO CONFIRMATION)"
 echo "2) Stop SPECIFIC instance ID(s)"
 echo
 
@@ -23,6 +23,7 @@ fi
 if [[ "$choice" == "1" ]]; then
     echo
     echo "Fetching all RUNNING EC2 instances in region: $REGION"
+
     INSTANCES=$(aws ec2 describe-instances \
       --filters Name=instance-state-name,Values=running \
       --query 'Reservations[].Instances[].InstanceId' \
@@ -33,17 +34,12 @@ if [[ "$choice" == "1" ]]; then
         exit 0
     fi
 
-    echo
-    echo "The following instances will be STOPPED:"
+    echo "Stopping all running EC2 instances..."
     echo "$INSTANCES"
-    echo
-
-    read -p "Are you sure? (yes/no): " confirm
-    [[ "$confirm" != "yes" ]] && echo "Aborted." && exit 0
 
     aws ec2 stop-instances --instance-ids $INSTANCES
 
-    echo "Stop command sent successfully."
+    echo "All running EC2 instances are being stopped."
 
 elif [[ "$choice" == "2" ]]; then
     echo
@@ -64,7 +60,7 @@ elif [[ "$choice" == "2" ]]; then
 
     aws ec2 stop-instances --instance-ids $INSTANCES
 
-    echo "Stop command sent successfully."
+    echo "Selected EC2 instances are being stopped."
 
 else
     echo "Invalid option."
