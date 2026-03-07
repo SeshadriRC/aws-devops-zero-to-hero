@@ -24,4 +24,4 @@ Before we start
 - Auto Scaling Group
 - Load Balancer
 - Target Group
-- Bastion Host or Jump Server
+- Bastion Host or Jump Server   - Used to connect to EC2 instance which is present in the Private Subnet, as this EC2 don't have Public IP to access it.
