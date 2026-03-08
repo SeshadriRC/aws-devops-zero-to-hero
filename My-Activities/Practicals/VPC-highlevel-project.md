@@ -35,7 +35,8 @@ Before we start
 1. Create VPC
 2. Create ASG
 3. Create Bastion Host
-4. Install the python application in one EC2 server
+4. Install the python application in only one EC2 server out of 2
+5. Create a Application LB
 
 1. Create a VPC
     - Name: aws-prod-example
@@ -140,3 +141,35 @@ vi index.html -> paste the contents from
 # Run the python application
 python3 -m http.server 8000
 ```
+
+---
+
+5. Create a Application LB
+
+### Create a LB
+
+- Name: aws-prod-example
+- LB always should be in public subnet and internet facing is set to ON
+- IPV4 - Yes
+- VPC - which we created
+- AZ- select both publich subnets
+- SG - select the one which we created
+
+### Create a Target group
+
+- Select instances
+- Name: aws-prod-example
+- HTTP: 8000                       --> Port in which the application is running 
+- Move to next tab and select those 2 EC2's
+
+- Once LB is created we can see below error, so to address this issue, edit the SG and allow port 80
+
+<img width="1919" height="819" alt="image" src="https://github.com/user-attachments/assets/481da6c1-dc7a-41af-9ebf-d8ede28720fc" />
+
+- Now Copy the DNS name and try to access, your project is ready
+
+<img width="1336" height="381" alt="image" src="https://github.com/user-attachments/assets/bb170e56-5901-49ed-b853-cf3147a53f4b" />
+
+
+
+---
