@@ -35,6 +35,7 @@ Before we start
 1. Create VPC
 2. Create ASG
 3. Create Bastion Host
+4. Install the python application in one EC2 server
 
 1. Create a VPC
     - Name: aws-prod-example
@@ -115,10 +116,27 @@ Check the **Subnet ID** of EC2, it will be created on both AZ ( 1a and 1b )
 
 ```bash
 scp -i <key.pem> <source> <destination>
-
 scp -i /mnt/e/WSL/AWS/EC2/first-ec2.pem /mnt/e/WSL/AWS/EC2/first-ec2.pem ubuntu@15.207.116.64:/home/ubuntu
 ```
 
 - Now try connecting from bastion host to private EC2 instance
 
+```bash
+ssh -i first-ec2.pem ubuntu@<private-ip>
+```
+
 ---
+
+4. Install python and create html file
+
+- Python3 already installed in EC2 by default
+
+[html-basic](https://www.w3schools.com/html/html_basic.asp)
+
+```bash
+# python
+vi index.html -> paste the contents from
+
+# Run the python application
+python3 -m http.server 8000
+```
