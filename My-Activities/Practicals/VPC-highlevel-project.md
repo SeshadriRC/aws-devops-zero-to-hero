@@ -36,7 +36,10 @@ Before we start
 2. Create ASG
 3. Create Bastion Host
 4. Install the python application in only one EC2 server out of 2
-5. Create a Application LB
+5. Create a Application LB and load your application
+6. Run the application on other another EC2 with changed content and load the DNS link
+
+---
 
 1. Create a VPC
     - Name: aws-prod-example
@@ -170,6 +173,10 @@ python3 -m http.server 8000
 
 <img width="1336" height="381" alt="image" src="https://github.com/user-attachments/assets/bb170e56-5901-49ed-b853-cf3147a53f4b" />
 
+---
+6. Run the application on other another EC2 with changed content and load the DNS link
+
+ - I noticed it is always forwarding to EC2 second instance
 
 
 ---
