@@ -8,16 +8,24 @@ A: In this scenario, I would design a VPC architecture in the following way.
    I would create 2 subnets: public and private. The public subnet would contain the load balancers and be accessible from the internet. The private subnet would host the application servers. 
    I would distribute the subnets across multiple Availability Zones for high availability. Additionally, I would configure auto scaling groups for the application servers.
 
+---
 Q: Your organization has a VPC with multiple subnets. You want to restrict outbound internet access for resources in one subnet, but allow outbound internet access for resources in another subnet. How would you achieve this?
 
 A: To restrict outbound internet access for resources in one subnet, we can modify the route table associated with that subnet. In the route table, we can remove the default route (0.0.0.0/0) that points to an internet gateway. 
    This would prevent resources in that subnet from accessing the internet. For the subnet where outbound internet access is required, we can keep the default route pointing to the internet gateway.
 
+Note:- I already practiced, i just removed removed IG and tested , it not worked. Then added ping command worked, make sure instance has public ip then only it will work
+
+<img width="1918" height="838" alt="image" src="https://github.com/user-attachments/assets/c23503e0-9b01-4285-9234-3c95bfcf8f0a" />
+
+
+---
 Q: You have a VPC with a public subnet and a private subnet. Instances in the private subnet need to access the internet for software updates. How would you allow internet access for instances in the private subnet?
 
 A: To allow internet access for instances in the private subnet, we can use a NAT Gateway or a NAT instance. 
    We would place the NAT Gateway/instance in the public subnet and configure the private subnet route table to send outbound traffic to the NAT Gateway/instance. This way, instances in the private subnet can access the internet through the NAT Gateway/instance.
 
+---
 Q: You have launched EC2 instances in your VPC, and you want them to communicate with each other using private IP addresses. What steps would you take to enable this communication?
 
 A: By default, instances within the same VPC can communicate with each other using private IP addresses. 
