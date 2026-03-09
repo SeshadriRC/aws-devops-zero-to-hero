@@ -34,7 +34,10 @@ My-practice
             "Effect": "Deny",
             "Principal": "*",
             "Action": "s3:*",
-            "Resource": "arn:aws:s3:::seshadri-first-bucket/*",
+            "Resource": [
+              "arn:aws:s3:::seshadri-first-bucket",
+              "arn:aws:s3:::seshadri-first-bucket/*"
+            ],
             "Condition": {
                 "StringNotEquals": {
                     "aws:PrincipalArn": "arn:aws:iam::466567470934:sesha-write"
