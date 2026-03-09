@@ -40,7 +40,7 @@ My-practice
             ],
             "Condition": {
                 "StringNotEquals": {
-                    "aws:PrincipalArn": "arn:aws:iam::466567470934:sesha-write"
+                    "aws:PrincipalArn": "arn:aws:iam::466567470934:user/sesha-write"
                 }
             }
         }
