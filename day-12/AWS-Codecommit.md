@@ -7,6 +7,31 @@
 - Clone the repo
 - Now perform git add, commit, push
 
+
+---
+
+- Overview of Codecommit
+
+<img width="1731" height="468" alt="image" src="https://github.com/user-attachments/assets/54bd225c-7dcb-4eea-8b61-4a0147d73090" />
+
+  - AWS provides a comprehensive set of CI/CD (Continuous Integration/Continuous Deployment) services that enable developers to automate and streamline their
+software delivery processes.
+  - AWS CodePipeline, AWS CodeBuild, and AWS CodeDeploy are the key services involved in achieving CI/CD on AWS platform.
+
+---
+**Advantages**
+
+- Managed Git
+- Scalability
+- Reliability
+
+---
+
+**Disadvantages**
+
+- Features
+- AWS Restricted
+- Less integrations with services outside AWS
 ---
 
 - Below is the Codecommit service
