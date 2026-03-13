@@ -4,7 +4,8 @@
 - Upload a sample file in the repo
 - Create a sample IAM user for this codecommit purpose
 - Need to install git, i haven't installed since im using gitbash
-- Clone the rep
+- Clone the repo
+- Now perform git add, commit, push
 
 ---
 
@@ -56,5 +57,14 @@ username: cc-user-at-466567470934
 
 password: as per that cred
 
+<img width="1715" height="359" alt="image" src="https://github.com/user-attachments/assets/2681b7ce-2223-456d-86cb-247645d3c018" />
+
+
+
+---
+
+- Perform git operations like git add, commit, push. we can see new file got pushed to the repo
+
+<img width="1914" height="585" alt="image" src="https://github.com/user-attachments/assets/3f1a9acb-a646-4fc1-894a-d220147883ae" />
 
 ---
