@@ -218,6 +218,17 @@ Nice flow:
 
 This clearly shows **Infrastructure as Code governance**.
 
+
+🔑 Key Concept (important for interviews)
+
+In AWS CloudFormation:
+
+Drift detection only identifies configuration differences
+
+Remediation requires a stack update
+
+CloudFormation does not automatically correct drift
+
 ---
 
 ✅ **Pro DevOps Tip:**
