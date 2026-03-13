@@ -52,7 +52,8 @@ HTTPS Git credentials for AWS CodeCommit
 
 - Clone the repo(clone https), it will ask for creds so input the creds which we created above
 
-<img width="1343" height="645" alt="image" src="https://github.com/user-attachments/assets/245c99aa-e360-4099-b693-b76f76e571ba" />
+username: cc-user-at-466567470934
+password: as per that cred
 
 
 ---
