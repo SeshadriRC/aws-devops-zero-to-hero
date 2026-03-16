@@ -1,3 +1,5 @@
+[Practicals](https://github.com/SeshadriRC/Devops-Concepts/blob/main/Mastering-a-Cloud-Platform/AWS-End-to-End-CI.md)
+
 # AWS Continuous Integration Demo
 
 ## Set Up GitHub Repository
