@@ -4,4 +4,4 @@ $0.056 per NAT Gateway Hour
 
 ---
 
-- space
+- space added
