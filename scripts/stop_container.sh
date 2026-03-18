@@ -2,4 +2,10 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi errod how are you"
+containers=$(docker ps -q)
+
+if [ -n "$containers" ]; then
+  docker rm -f $containers
+else
+  echo "No running containers"
+fi
