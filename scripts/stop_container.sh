@@ -2,4 +2,4 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi errodr j"
+echo "Hi errod how are you"
