@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, world! This is my second application - i removed inline policy'
+    return 'Hello, world! This is my second application - i removed inline policy. Removed AWSCodeDeployDeployerAccess/AWSCodeDeployRole/AmazonS3FullAccess'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
