@@ -1,25 +1,13 @@
 #!/bin/bash
 set -e
 
-echo "Stopping and removing running containers..."
+echo "Step 1: Remove ALL containers (running + stopped)"
+docker rm -f $(docker ps -aq) 2>/dev/null || true
 
-containers=$(docker ps -q)
+echo "Step 2: Remove dangling images"
+docker image prune -af
 
-if [ -n "$containers" ]; then
-  docker rm -f $containers
-else
-  echo "No running containers"
-fi
-
-echo "Removing dangling images (untagged)..."
-docker image prune -f
-
-echo "Removing old images except latest..."
-
-# Get latest image ID
-latest_image=$(docker images --format "{{.Repository}}:{{.Tag}} {{.ID}}" | grep 'latest' | awk '{print $2}')
-
-# Remove all images except latest
-docker images --format "{{.ID}}" | grep -v "$latest_image" | xargs -r docker rmi -f
+echo "Step 3: Remove unused images (extra safety)"
+docker rmi -f $(docker images -f "dangling=true" -q) 2>/dev/null || true
 
 echo "Cleanup completed"
