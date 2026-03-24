@@ -48,12 +48,27 @@ Now that you have your ECR repository set up and the AWS CLI configured, let's p
 
 ```
 docker build -t <your-image-name> <path-to-dockerfile>
+
+Example:
+root@LAPTOP-QMBUJPPJ:~# cat Dockerfile
+FROM ubuntu:latest
+root@LAPTOP-QMBUJPPJ:~# docker build -t myfirst-image .
+
+root@LAPTOP-QMBUJPPJ:~# docker images
+REPOSITORY      TAG       IMAGE ID       CREATED       SIZE
+myfirst-image   latest    f794f40ddfff   4 weeks ago   78.1MB
 ```
 
 2. Tag the image with your ECR repository URI:
 
 ```
 docker tag <your-image-name>:<tag> <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-repository-name>:<tag>
+
+Example:
+docker tag myfirst-image:latest 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
+
+REPOSITORY                                                    TAG       IMAGE ID       CREATED       SIZE
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   latest    f794f40ddfff   4 weeks ago   78.1MB
 ```
 
 3. Log in to your ECR registry using the AWS CLI:
@@ -66,7 +81,13 @@ aws ecr get-login-password --region <your-region> | docker login --username AWS 
 
 ```
 docker push <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-repository-name>:<tag>
+
+docker push 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
 ```
+<img width="1919" height="494" alt="image" src="https://github.com/user-attachments/assets/79b2a7af-77e5-4cbe-ad43-506602a77c2b" />
+
+<img width="1782" height="301" alt="image" src="https://github.com/user-attachments/assets/420799ee-4f60-42bf-8f03-ee796b2b999c" />
+
 
 ## 5. Pulling Docker Images from ECR
 To pull and use the Docker images from ECR on another system or AWS service, follow these steps:
@@ -82,5 +103,30 @@ docker pull <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-repo
 As good practice, remember to clean up resources that you no longer need to avoid unnecessary costs. To delete an ECR repository:
 
 1. Make sure there are no images in the repository, or delete the images using `docker rmi` locally.
-2. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
-3. Click on "Delete" and confirm the action.
+
+```bash
+root@LAPTOP-QMBUJPPJ:~# docker images
+REPOSITORY                                                    TAG       IMAGE ID       CREATED       SIZE
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   latest    f794f40ddfff   4 weeks ago   78.1MB
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   v2        f794f40ddfff   4 weeks ago   78.1MB
+myfirst-image                                                 latest    f794f40ddfff   4 weeks ago   78.1MB
+ubuntu                                                        latest    f794f40ddfff   4 weeks ago   78.1MB
+
+root@LAPTOP-QMBUJPPJ:~# docker rmi f79
+Error response from daemon: conflict: unable to delete f794f40ddfff (must be forced) - image is referenced in multiple repositories
+root@LAPTOP-QMBUJPPJ:~# docker rmi -f f79
+Untagged: 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
+Untagged: 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:v2
+Untagged: 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo@sha256:69426aeccf94f0b8876e114982963a979f0205bd84d959eff7ab1982928846ea
+Untagged: myfirst-image:latest
+Untagged: ubuntu:latest
+Untagged: ubuntu@sha256:186072bba1b2f436cbb91ef2567abca677337cfc786c86e107d25b7072feef0c
+Deleted: sha256:f794f40ddfff5af8ef1b39ee29eab3b5400ea70b9ebefd286812dbbe0054ad6b
+Deleted: sha256:f2a7f072635332d307212e318e07284948b89f4167fce5c4d7c9cfb7590b74b6
+
+root@LAPTOP-QMBUJPPJ:~# docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+```
+
+3. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
+4. Click on "Delete" and confirm the action.
