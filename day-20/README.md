@@ -153,5 +153,8 @@ root@LAPTOP-QMBUJPPJ:~# docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 
+<img width="1905" height="457" alt="image" src="https://github.com/user-attachments/assets/953386e6-7efe-4f9d-8e04-fd28d3490aab" />
+
+
 3. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
 4. Click on "Delete" and confirm the action.
