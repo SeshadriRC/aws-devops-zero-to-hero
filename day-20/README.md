@@ -99,6 +99,31 @@ To pull and use the Docker images from ECR on another system or AWS service, fol
 docker pull <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-repository-name>:<tag>
 ```
 
+```bash
+root@LAPTOP-QMBUJPPJ:~# docker pull 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
+latest: Pulling from demo-app-repo
+18dbadc1f2f9: Pull complete
+Digest: sha256:69426aeccf94f0b8876e114982963a979f0205bd84d959eff7ab1982928846ea
+Status: Downloaded newer image for 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:latest
+
+root@LAPTOP-QMBUJPPJ:~# docker images
+REPOSITORY                                                    TAG       IMAGE ID       CREATED       SIZE
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   latest    f794f40ddfff   4 weeks ago   78.1MB
+
+root@LAPTOP-QMBUJPPJ:~# docker pull 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:v2
+v2: Pulling from demo-app-repo
+Digest: sha256:69426aeccf94f0b8876e114982963a979f0205bd84d959eff7ab1982928846ea
+Status: Downloaded newer image for 466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:v2
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo:v2
+
+root@LAPTOP-QMBUJPPJ:~# docker images
+REPOSITORY                                                    TAG       IMAGE ID       CREATED       SIZE
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   latest    f794f40ddfff   4 weeks ago   78.1MB
+466567470934.dkr.ecr.ap-south-1.amazonaws.com/demo-app-repo   v2        f794f40ddfff   4 weeks ago   78.1MB
+```
+
+
 ## 6. Cleaning Up Resources
 As good practice, remember to clean up resources that you no longer need to avoid unnecessary costs. To delete an ECR repository:
 
