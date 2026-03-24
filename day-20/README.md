@@ -157,7 +157,13 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 
 
 3. Go to the AWS Management Console, navigate to the Amazon ECR service, and select your repository.
-4. Click on "Delete" and confirm the action.
+
+5. Click on "Delete" and confirm the action.
+
+<img width="1919" height="394" alt="image" src="https://github.com/user-attachments/assets/608416a8-44b8-4f30-9b85-689a63192048" />
+
+
+---
 
 ## I Created a separate user
 
