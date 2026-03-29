@@ -16,3 +16,5 @@ eksctl – A command line tool for working with EKS clusters that automates many
 AWS CLI – A command line tool for working with AWS services, including Amazon EKS. For more information, see [Installing, updating, and uninstalling the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) in the AWS Command Line Interface User Guide. After installing the AWS CLI, we recommend that you also configure it. For more information, see [Quick configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) with aws configure in the AWS Command Line Interface User Guide.
 
 <img width="572" height="103" alt="image" src="https://github.com/user-attachments/assets/11f07346-049a-4663-a08c-2e05fc185a0f" />
+
+<img width="781" height="320" alt="image" src="https://github.com/user-attachments/assets/0cd890ff-acd8-476a-b3ec-1288aa52112b" />
