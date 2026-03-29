@@ -18,4 +18,5 @@ AWS CLI – A command line tool for working with AWS services, including Amazon 
 <img width="572" height="103" alt="image" src="https://github.com/user-attachments/assets/11f07346-049a-4663-a08c-2e05fc185a0f" />
 
 - for the purpose of demo we will use root user
-<img width="781" height="320" alt="image" src="https://github.com/user-attachments/assets/0cd890ff-acd8-476a-b3ec-1288aa52112b" />
+<img width="652" height="204" alt="image" src="https://github.com/user-attachments/assets/93441dd3-991e-43df-9f6b-1281a1a3697f" />
+
