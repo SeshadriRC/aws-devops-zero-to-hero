@@ -1,3 +1,79 @@
+**OIDC (OpenID Connect)** is a simple way to **log in to one system using another trusted account**.
+
+## 🧠 Simple definition
+
+👉 OIDC = **Login using an identity provider**
+
+Example:
+
+* Login to an app using Google
+* Login to AWS using SSO
+
+## 🔑 Real-world analogy
+
+Think of it like this:
+
+* You go to a hotel 🏨
+* Instead of creating a new ID, you show your Aadhaar/passport
+* Hotel trusts it and gives you access
+
+👉 That Aadhaar = OIDC identity provider
+
+## ⚙️ How it works (very simple)
+
+1. You try to log in to an app
+2. App redirects you to an identity provider (like Google or Amazon Web Services)
+3. You log in there
+4. You get a **token (ID token)**
+5. App trusts the token and logs you in
+
+
+## 📦 Key components
+
+* **User** → you
+* **Client** → app (website / AWS / Kubernetes)
+* **Identity Provider (IdP)** → Google, AWS, Okta
+* **Token** → proof you are authenticated
+
+
+## 🚀 Example in your DevOps world
+
+### 🔹 In AWS EKS
+
+OIDC is used for:
+
+* Pods accessing AWS services securely
+
+👉 Instead of storing credentials:
+
+* Pod gets a **temporary token**
+* AWS trusts it via OIDC
+
+### 🔹 Example flow
+
+* Pod → requests access to S3
+* AWS checks OIDC token
+* If valid → access granted ✅
+
+
+## 🔐 Why OIDC is important
+
+* No hardcoded passwords ❌
+* Secure token-based access ✅
+* Used everywhere:
+
+  * Kubernetes
+  * AWS IAM Roles for Service Accounts (IRSA)
+  * SSO logins
+
+
+## 🧠 One-line memory trick
+
+👉 **OIDC = “Login using another trusted identity”**
+
+
+---
+
 # commands to configure IAM OIDC provider 
 
 ```
