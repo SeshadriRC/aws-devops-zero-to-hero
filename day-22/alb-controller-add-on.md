@@ -42,6 +42,7 @@ helm repo update eks
 
 Install
 
+- vpcid we can find from networking tab of demo-cluster
 ```
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
   --set clusterName=<your-cluster-name> \
