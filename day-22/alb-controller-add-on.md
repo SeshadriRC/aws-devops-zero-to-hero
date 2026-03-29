@@ -51,6 +51,11 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n ku
   --set region=<your-region> \
   --set vpcId=<your-vpc-id>
 ```
+- For deleting the created helm release
+
+```
+helm delete aws-load-balancer-controller -n kube-system
+```
 
 Verify that the deployments are running.
 
