@@ -4,6 +4,9 @@ Please follow the prerequisites doc before this.
 
 ## Install using Fargate
 
+<img width="1826" height="918" alt="image" src="https://github.com/user-attachments/assets/df014728-d303-4ea4-b86b-f77b5eddc5e9" />
+
+
 - It taken 17 minutes to install
 
 ```
