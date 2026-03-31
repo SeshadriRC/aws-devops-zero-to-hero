@@ -3,5 +3,8 @@ NAT gateway
 $0.056 per NAT Gateway Hour
 
 ---
+EKS - 2hrs 
 
-- space added
+USD 0.42
+
+---
